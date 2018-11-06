@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package pb;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc LogTransfer (LogRequest) returns (stream LogReply) {}
+
+}
+
+// The request message containing the user's name.
+message LogRequest {
+  string message = 1;
+}
+
+// The response message containing the greetings
+message LogReply {
+  string message = 1;
+}
