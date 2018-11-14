@@ -1,0 +1,11 @@
+ Normal   SuccessfulMountVolume  1m                 kubelet, paasn2    MountVolume.SetUp succeeded for volume "default-token-w477v"
+   Normal   Scheduled              1m                 default-scheduler  Successfully assigned hello-world-v2-66ccbcccdf-g276d to paasn2
+   Warning  Unhealthy              19s (x3 over 36s)  kubelet, paasn2    Readiness probe failed: curl: (22) The requested URL returned error: 503
+   Warning  Unhealthy              15s (x3 over 31s)  kubelet, paasn2    Liveness probe failed: curl: (22) The requested URL returned error: 503
+   Normal   Pulling                12s (x2 over 1m)   kubelet, paasn2    pulling image "registry.paas.dev/xyyd/demo-dev/hello-world:4"
+   Normal   Pulled                 12s (x2 over 1m)   kubelet, paasn2    Successfully pulled image "registry.paas.dev/xyyd/demo-dev/hello-world:4"
+   Normal   Created                12s (x2 over 1m)   kubelet, paasn2    Created container
+   Normal   Started                12s (x2 over 1m)   kubelet, paasn2    Started container
+   Warning  Unhealthy              12s                kubelet, paasn2    Readiness probe failed: curl: (52) Empty reply from server
+   Warning  Unhealthy              12s                kubelet, paasn2    Readiness probe failed: rpc error: code = 2 desc = oci runtime error: exec failed: container_linux.go:247: starting container process caused "process_linux.go:83: executing setns process caused \"exit status 15\""
+   Normal   Killing                12s                kubelet, paasn2    Killing container with id docker://hello-world:Container failed liveness probe.. Container will be killed and recreated.

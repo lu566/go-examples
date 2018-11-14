@@ -1,0 +1,77 @@
+{"moses-dev:config-provider-v1-1-5kxxm ",
+"moses-dev:data-sync-provider-v1-1-nchj5 ",
+"moses-dev:express-consumer-v1-1-v6l76 ",
+"moses-dev:freight-admin-consumer-v1-3-xdc88 ",
+"moses-dev:freight-consumer-v1-3-4446q ",
+"moses-dev:freight-provider-v1-12-brwwv ",
+"moses-dev:import-admin-consumer-v1-1-5w5jb ",
+"moses-dev:import-provider-v1-2-wfs2x ",
+"moses-dev:invoice-provider-v1-6-7b5lw ",
+"moses-dev:jpush-admin-v1-1-28q4l ",
+"moses-dev:jpush-command-v1-3-b8rtj ",
+"moses-dev:jpush-comsumer-v1-1-2wg4b ",
+"moses-dev:jpush-provider-v1-3-x7cgg ",
+"moses-dev:jpush-query-v1-1-kfrdb ",
+"moses-dev:merchants-consumer-v1-1-xqck9 ",
+"moses-dev:merchants-provider-v1-1-bjrmh ",
+"moses-dev:order-consumer-v1-3-5zg5k ",
+"moses-dev:product-brand-v1-5-h7chd ",
+"moses-dev:product-category-admin-v1-6-kvcpb ",
+"moses-dev:product-category-consumer-v1-4-ksk8j ",
+"moses-dev:product-delivery-address-v1-5-24jwl ",
+"moses-dev:search-order-admin-v1-30-vh94q ",
+"moses-dev:search-order-provider-v1-12-c8rc4 ",
+"moses-dev:search-shop-v1-19-4bssp ",
+"moses-dev:syncconfig-admin-v1-3-54g5w ",
+"moses-test:api-info-v1-1-vtwzb ",
+
+并发测试组:
+SUCCESS "moses-test:freight-admin-consumer-v1-5-x5bpj ",
+SUCCESS "moses-test:freight-consumer-v1-1-kqf2t ",
+SUCCESS "moses-test:config-provider-v1-3-5m8bc ",
+
+"moses-test:data-sync-provider-v1-2-c85nh ",
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:compile (default-compile) on project data-sync-provider: Execution default-compile of goal org.apache.maven.plugins:maven-compiler-plugin:3.3:compile failed: Plugin org.apache.maven.plugins:maven-compiler-plugin:3.3 or one of its dependencies could not be resolved: Could not transfer artifact org.codehaus.plexus:plexus-compiler-javac:jar:2.5 from/to nexus (http://nexus.vpclub.cn/repository/maven-public/): Failed to transfer file: http://nexus.vpclub.cn/repository/maven-public/org/codehaus/plexus/plexus-compiler-javac/2.5/plexus-compiler-javac-2.5.jar. Return code is: 504 , ReasonPhrase:Gateway Time-out. -> [Help 1]
+再次执行成功
+
+"moses-test:express-consumer-v1-1-qph96 ",
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:compile (default-compile) on project freight-consumer: Compilation failure
+[ERROR] /opt/app-root/src/vpclub/freight-consumer/src/main/java/cn/vpclub/moses/freight/consumer/web/FreightTemplateController.java:[41,33] 找不到符号
+[ERROR] 符号:   变量 freightRpcService
+[ERROR] 位置: 类 cn.vpclub.moses.freight.consumer.web.FreightTemplateController
+
+
+
+"moses-test:freight-provider-v1-8-gwb69 ",
+"moses-test:import-admin-consumer-v1-6-28h78 ",
+"moses-test:import-provider-v1-9-fv4w9 ",
+"moses-test:invoice-admin-v1-1-bh8z2 ",
+"moses-test:invoice-consumer-v1-6-962fx ",
+
+
+"moses-test:invoice-provider-v1-6-wbztk ",
+"moses-test:merchants-consumer-v1-1-l52vj ",
+"moses-test:merchants-provider-v1-1-bshjj ",
+"moses-test:order-consumer-v1-1-2frlm ",
+"moses-test:product-brand-v1-3-ffg7w ",
+"moses-test:product-category-admin-v1-8-6fsg6 ",
+"moses-test:product-category-consumer-v1-3-cmhcm ",
+"moses-test:product-delivery-address-v1-3-4sdlp ",
+"moses-test:report-consumer-v1-41-gkjz5 ",
+"moses-test:search-order-admin-v1-9-bxtjj ",
+"moses-test:search-order-consumer-v1-1-8wscp ",
+share-admin
+
+"moses-test:search-order-provider-v1-10-f4rvt ",
+"moses-test:search-shop-v1-8-bnkqw ",
+"moses-test:share-admin-consumer-v1-1-lgpz6 ",
+"moses-test:shop-admin-consumer-v1-12-k8cbm ",
+"moses-test:syncconfig-admin-v1-2-9k4pp "}
+
+
+            command:
+            - curl
+            - --silent
+            - --show-error
+            - --fail
+            - http://localhost:8080/health

@@ -26,7 +26,7 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-var podname string = "hello-world-36-d98fc675d-p85xz"
+var podname string = "hello-world-v2-95-7b69bbbc67-b546j"
 var namespace string = "demo"
 
 var addr = flag.String("addr", "localhost:8080", "http service address")
@@ -266,8 +266,6 @@ func logs(w http.ResponseWriter, r *http.Request) {
 		}
 
 	}
-
-
 }
 
 func home(w http.ResponseWriter, r *http.Request) {

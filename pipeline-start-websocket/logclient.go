@@ -18,10 +18,11 @@ import (
 
 
 func main() {
-//	WsLogsOut("localhost:8080","/logs","namespace=demo&name=hello-world")
+	WsLogsOut("localhost:8080","/logs","namespace=demo&name=hello-world")
 
-	WsLogsOut("localhost:8080","/sock","")
+//	WsLogsOut("localhost:8080","/sock","")
 }
+
 
 
 func WsLogsOut(host,path,query string){
