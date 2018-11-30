@@ -5,13 +5,13 @@ import (
 	"flag"
 	"log"
 
-	pb "github.com/smallnest/grpc-examples/helloworld/pb"
+	pb "github.com/lu566/go-examples/grpc-helloworld/pb"
 	"google.golang.org/grpc"
 )
 
 var (
 	address = flag.String("addr", "localhost:8972", "address")
-	name    = flag.String("n", "world", "name")
+	name    = flag.String("n", "worlds", "name")
 )
 
 func main() {

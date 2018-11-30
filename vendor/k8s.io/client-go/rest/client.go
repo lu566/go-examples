@@ -244,6 +244,9 @@ func (c *RESTClient) Patch(pt types.PatchType) *Request {
 
 // Get begins a GET request. Short for c.Verb("GET").
 func (c *RESTClient) Get() *Request {
+
+	fmt.Println("====================",c.base.Host)
+
 	return c.Verb("GET")
 }
 

@@ -10,14 +10,14 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 )
 
-var namespace = "demo"
+var namespace = "demo-test"
 var podname = "hello-world-v2-99"
 
 func main() {
-	watch()
+	swatch()
 }
 
-func watch()  {
+func swatch()  {
 	kubeconfig := flag.String("kubeconfig", "/Users/wang/.kube/config", "(optional) absolute path to the kubeconfig file")
 	flag.Parse()
 

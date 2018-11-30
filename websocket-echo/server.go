@@ -27,6 +27,7 @@ func echo(w http.ResponseWriter, r *http.Request) {
 	}
 	defer c.Close()
 
+
 	for {
 		mt, message, err := c.ReadMessage()
 		if err != nil {

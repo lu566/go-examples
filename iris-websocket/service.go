@@ -22,7 +22,12 @@ func ServerLoop() {
 // OnConnect handles incoming websocket connection
 func OnConnect(c websocket.Connection) {
 	//Join 线程隔离
+	fmt.Println(c.Context().String())
 
+	fmt.Println(c.Context().GetHeader("Connection"))
+	fmt.Println(c.Context().GetHeader("Sec-Websocket-Key"))
+	fmt.Println(c.Context().GetHeader("Sec-Websocket-Version"))
+	fmt.Println(c.Context().GetHeader("Upgrade"))
 
 	//Join将此连接注册到房间，如果它不存在则会创建一个新房间。一个房间可以有一个或多个连接。一个连接可以连接到许多房间。所有连接都自动连接到由“ID”指定的房间。
 	c.Join("room1")

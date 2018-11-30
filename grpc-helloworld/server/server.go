@@ -6,7 +6,7 @@ import (
 
 	"flag"
 
-	pb "github.com/smallnest/grpc-examples/helloworld/pb"
+	pb "github.com/lu566/go-examples/grpc-helloworld/pb"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"

@@ -730,11 +730,17 @@ func (r *Request) request(fn func(*http.Request, *http.Response)) error {
 //  * If the server responds with a status: *errors.StatusError or *errors.UnexpectedObjectError
 //  * http.Client.Do errors are returned directly.
 func (r *Request) Do() Result {
+	r.URL()
+
 	r.tryThrottle()
 
 	var result Result
 	err := r.request(func(req *http.Request, resp *http.Response) {
 		result = r.transformResponse(resp, req)
+
+		fmt.Println("--------",r.URL())
+
+
 	})
 	if err != nil {
 		return Result{err: err}
@@ -1028,6 +1034,7 @@ func (r Result) Into(obj runtime.Object) error {
 		// Check whether the result has a Status object in the body and prefer that.
 		return r.Error()
 	}
+
 	if r.decoder == nil {
 		return fmt.Errorf("serializer for %s doesn't exist", r.contentType)
 	}
